@@ -15,7 +15,6 @@ in the same protein in UKBB and deCODE.
 Import data
 
 ``` r
-library(ggplot2)
 ukbb_decode <- read.table(file="merged_ukbb_decode_cleaned.txt", header=T, fill=T)
 ```
 
@@ -300,6 +299,7 @@ print(num_pqtl)
 Compare betas of UKBB SNPs and deCODE SNPs
 
 ``` r
+library(ggplot2)
 ggplot(aes(x=beta_decode, y=beta_discovery_ukbb), data=ukbb_decode)+geom_point() #create plot to compare betas
 ```
 
